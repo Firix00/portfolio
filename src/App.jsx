@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
+import { useState } from 'react';
 const IconBase = ({ children, className = 'h-5 w-5' }) => (
   <svg
     viewBox="0 0 24 24"
@@ -183,8 +183,20 @@ const experience = [
     location: 'Netherlands',
     bullets: [
       'Built features for a couples therapy app in collaboration with a licensed therapist.',
-      'Designed AI-driven backend therapy workflows.',
+      'Designed AI-driven therapy backend workflows.',
       'Added security layers for sensitive user data protection.',
+    ],
+    projects: [
+      {
+        name: 'Sona Therapy App',
+        description:
+          'A couples therapy application developed with licensed therapists, focused on guided interaction, therapy support flows, and privacy-conscious implementation.',
+        tags: ['Flutter', 'Therapy', 'Security'],
+        screenshots: [],
+        links: [],
+        privacyNote:
+          'Unfortunately, I cannot publicly share product details or screenshots for this project because of privacy concerns.',
+      },
     ],
   },
   {
@@ -194,8 +206,65 @@ const experience = [
     location: 'USA / Togo',
     bullets: [
       'Contributed to multiple web platforms and internal business applications.',
-      'Worked on an AI tools showcase, humanitarian platform, and employee payment system.',
-      'Delivered across product, backend, and implementation needs.',
+      'Worked across AI, internal tools, fintech-related products, and web platforms.',
+      'Delivered backend, mobile, and implementation work across several company initiatives.',
+    ],
+    projects: [
+      {
+        name: 'Kowdi AI',
+        description: 'Website for the AI-focused branch of the company.',
+        tags: ['Web', 'AI'],
+        links: [{ label: 'Visit Website', url: 'https://boonjoseph16.wixsite.com/website' }],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Elbright Import / Export',
+        description:
+          'Corporate website for the company’s import/export activities, built in partnership with Pathway Global Technology & Consulting LLC.',
+        tags: ['Web', 'Corporate'],
+        links: [{ label: 'Visit Website', url: 'https://www.elbrightcorporation.com' }],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Elbright Association',
+        description:
+          'Social support association website focused on helping people in difficult situations and promoting aid initiatives.',
+        tags: ['Web', 'NGO'],
+        links: [{ label: 'Visit Website', url: 'https://kowdiaispace.wixsite.com/el-bright-aid' }],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Media / MIJA Church Website',
+        description:
+          'Church/community website highlighting messages, media content, and community information.',
+        tags: ['Web', 'WordPress'],
+        links: [{ label: 'Visit Website', url: 'http://boonjoseph16.wixstudio.com/mija/fr' }],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Kowdi Pay',
+        description:
+          'Internal employee account management application for deposits, transfers, and balance tracking.',
+        tags: ['Flutter', 'Fintech', 'Internal Tool'],
+        links: [],
+        screenshots: [],
+        privacyNote:
+          'This was an internal product, so I cannot publicly show screenshots or detailed product flows.',
+      },
+      {
+        name: 'Kowdi Altura Capital',
+        description:
+          'Internal investment and portfolio management application built for company use.',
+        tags: ['Flutter', 'Fintech'],
+        links: [],
+        screenshots: [],
+        privacyNote:
+          'This project cannot be publicly demonstrated because it was built for internal/private use.',
+      },
     ],
   },
   {
@@ -204,9 +273,21 @@ const experience = [
     period: '2025',
     location: 'USA',
     bullets: [
-      'Developed Safe Shop Alert, a product recall application.',
-      'Handled backend API development and mobile features.',
-      'Contributed to AWS deployment pipeline work.',
+      'Worked on backend and mobile contributions for a product safety solution.',
+      'Contributed to AWS deployment-related work.',
+      'Collaborated on product development for a recall alert platform.',
+    ],
+    projects: [
+      {
+        name: 'Safe Shop Alert',
+        description:
+          'A dangerous product recall alert application designed to notify users when a purchased product is identified as risky.',
+        tags: ['Flutter', 'NestJS', 'AWS'],
+        links: [],
+        screenshots: [],
+        privacyNote:
+          'I cannot publicly share screenshots of this product due to client and product restrictions.',
+      },
     ],
   },
   {
@@ -215,9 +296,49 @@ const experience = [
     period: 'Sep 2024 – Jan 2025',
     location: 'Togo',
     bullets: [
-      'Worked on backend systems, admin dashboards, and mobile app features.',
-      'Supported new verticals including pharmacy and shipping.',
-      'Improved product architecture and delivery workflows.',
+      'Worked on backend systems, admin dashboards, and mobile app features for a delivery platform.',
+      'Contributed to new verticals such as pharmacy, shipping, and Kaba-China.',
+      'Supported UI improvements and broader product evolution.',
+    ],
+    projects: [
+      {
+        name: 'Kaba Delivery',
+        description:
+          'Customer delivery application with full-stack contributions across mobile features, admin tools, and service expansions.',
+        tags: ['Flutter', 'Delivery'],
+        links: [
+          {
+            label: 'View on Play Store',
+            url: 'https://play.google.com/store/apps/details?id=tg.tmye.kaba.brave.one&hl=fr',
+          },
+        ],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Kaba Partners',
+        description:
+          'Partner application for merchants and sales points to manage orders, products, and interactions with the main Kaba ecosystem.',
+        tags: ['Flutter', 'Kaba Delivery'],
+        links: [
+          {
+            label: 'View on Play Store',
+            url: 'https://play.google.com/store/apps/details?id=tg.tmye.kaba.partner&hl=fr',
+          },
+        ],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Kaba Riders',
+        description:
+          'Driver application for delivery agents with ride tracking, delivery management, history, and real-time notifications.',
+        tags: ['Flutter', 'Delivery'],
+        links: [],
+        screenshots: [],
+        privacyNote:
+          'Due to product ownership and usage rights, I cannot publicly share screenshots of this application.',
+      },
     ],
   },
   {
@@ -227,7 +348,23 @@ const experience = [
     location: 'Togo',
     bullets: [
       'Designed and developed a mobile e-commerce application.',
-      'Implemented product browsing, listings, and shopping features.',
+      'Built shopping flows, product browsing, and core marketplace features.',
+      'Also developed the admin/dashboard side using Flutter and Firebase.',
+    ],
+    projects: [
+      {
+        name: 'Aloba',
+        description:
+          'E-commerce mobile application with catalog, ordering flows, updates in 2024, and a back-office/admin dashboard built with Flutter and Firebase.',
+        tags: ['Flutter', 'Dart', 'Firebase', 'Dashboard', 'E-commerce'],
+        screenshots: [
+          '/images/aloba-1.jpg',
+          '/images/aloba-2.jpg',
+          '/images/aloba-3.jpg',
+        ],
+        links: [],
+        privacyNote: null,
+      },
     ],
   },
   {
@@ -238,29 +375,94 @@ const experience = [
     bullets: [
       'Built websites for NGOs, communities, and professionals.',
       'Worked with WordPress, Wix, and custom web solutions.',
+      'Delivered showcase websites tailored to each client’s communication needs.',
+    ],
+    projects: [
+      {
+        name: 'AICD – Refugee Association',
+        description:
+          'Website presenting activities, news, and useful information for refugees.',
+        tags: ['Web', 'HTML', 'CSS'],
+        links: [{ label: 'Visit Website', url: 'https://www.africimmigrationclando.net/' }],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'L’AET – Writers of Togo',
+        description:
+          'Wix showcase website for the writers association of Togo, highlighting authors, events, and publications.',
+        tags: ['Wix', 'Culture'],
+        links: [{ label: 'Visit Website', url: 'https://www.ecrivainsdutogo.com' }],
+        screenshots: [],
+        privacyNote: null,
+      },
+      {
+        name: 'Professor Showcase Website',
+        description:
+          'Showcase website for a professor presenting profile, courses, and publications.',
+        tags: ['WordPress', 'Showcase'],
+        links: [],
+        screenshots: ['/images/prof-1.png', '/images/prof-2.png'],
+        privacyNote: null,
+      },
     ],
   },
 ];
-
 const projects = [
   {
-    eyebrow: 'Productivity App',
-    title: 'Se-Learn Flow',
-    period: 'Jul 2025 – Present',
+    eyebrow: 'Personal Project',
+    title: 'Se-Learn',
+    period: '2022',
     description:
-      'A workflow and task management application inspired by tools like Notion and To-Do apps, focused on productivity and structured planning.',
-    tags: ['Flutter', 'Task Management', 'Productivity', 'Mobile'],
+      'An educational mobile application for students, featuring learning content, mini-games, quizzes, and school support functionality.',
+    tags: ['Flutter', 'Dart', 'Education'],
+    status: 'Completed',
+    screenshots: [
+      '/images/selearn-1.png',
+      '/images/selearn-2.png',
+      '/images/selearn-3.png',
+      '/images/selearn-4.png',
+      '/images/selearn-5.png',
+      '/images/selearn-6.png',
+      '/images/selearn-7.png',
+      '/images/selearn-8.png',
+      '/images/selearn-9.png',
+      '/images/selearn-10.png',
+      '/images/selearn-11.png',
+      '/images/selearn-12.png',
+      '/images/selearn-13.png',
+      '/images/selearn-14.png',
+      '/images/selearn-15.png',
+      '/images/selearn-16.png',
+    ],
+    links: [],
+    privacyNote: null,
   },
   {
-    eyebrow: 'E-learning Mobile App',
-    title: 'Se-Learn',
-    period: '2019 – 2024',
+    eyebrow: 'Personal Project',
+    title: 'Se-Learn Flow',
+    period: '2024',
     description:
-      'An educational mobile application featuring quizzes, gamification, and structured learning paths, refined continuously over five years.',
-    tags: ['Flutter', 'Gamification', 'E-learning', 'Mobile'],
+      'A day-planning and productivity application inspired by Notion and Microsoft To-Do, with multi-day planning and lightweight AI-assisted task organization.',
+    tags: ['Flutter', 'Productivity', 'AI'],
+    status: 'Active',
+    screenshots: [
+      '/images/flow-1.png',
+      '/images/flow-2.png',
+      '/images/flow-3.png',
+      '/images/flow-4.png',
+      '/images/flow-5.png',
+      '/images/flow-6.png',
+      '/images/flow-7.png',
+      '/images/flow-8.png',
+      '/images/flow-9.png',
+      '/images/flow-10.png',
+      '/images/flow-11.png',
+    ],
+    links: [],
+    privacyNote: null,
   },
 ];
-
 const principles = [
   'Delivered On Time',
   'Security-First Mindset',
@@ -281,6 +483,44 @@ const skills = {
 const heroPortrait = 'https://i.ibb.co/Lz0V9qNy/joe.png';
 
 export default function BoonJosephPortfolio() {
+  const [lightbox, setLightbox] = useState({
+    open: false,
+    title: '',
+    images: [],
+    index: 0,
+  });
+  
+  const openScreenshots = (title, images) => {
+    setLightbox({
+      open: true,
+      title,
+      images,
+      index: 0,
+    });
+  };
+  
+  const closeScreenshots = () => {
+    setLightbox({
+      open: false,
+      title: '',
+      images: [],
+      index: 0,
+    });
+  };
+  
+  const prevImage = () => {
+    setLightbox((prev) => ({
+      ...prev,
+      index: prev.index === 0 ? prev.images.length - 1 : prev.index - 1,
+    }));
+  };
+  
+  const nextImage = () => {
+    setLightbox((prev) => ({
+      ...prev,
+      index: prev.index === prev.images.length - 1 ? 0 : prev.index + 1,
+    }));
+  };
   return (
     <div className="min-h-screen bg-neutral-950 text-white selection:bg-emerald-400/30">
       <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -352,7 +592,7 @@ export default function BoonJosephPortfolio() {
             <motion.div variants={fadeUp} className="grid max-w-2xl grid-cols-2 gap-4 pt-4 md:grid-cols-4">
               {[
                 ['5+', 'Years of Experience'],
-                ['15+', 'Projects Delivered'],
+                ['17+', 'Projects Delivered'],
                 ['3', 'Active Clients'],
                 ['100%', 'On-Time Delivery'],
               ].map(([value, label]) => (
@@ -449,39 +689,109 @@ export default function BoonJosephPortfolio() {
               Real projects, real clients, real impact — across Africa, Europe, and the USA.
             </p>
           </motion.div>
-
-          <div className="space-y-5">
-            {experience.map((item, index) => (
-              <motion.div key={item.company} variants={fadeUp}>
-                <Card className="overflow-hidden rounded-[2rem] border-white/10 bg-white/[0.04]">
-                  <CardContent className="grid gap-6 p-7 lg:grid-cols-[90px_1fr_260px]">
-                    <div className="text-sm font-medium text-emerald-300/90">{String(index + 1).padStart(2, '0')}</div>
-                    <div>
-                      <div className="flex flex-wrap items-center gap-3">
-                        <h3 className="text-white text-2xl font-semibold">{item.company}</h3>
-                        {index === 0 && <Badge className="rounded-full bg-emerald-400/15 text-emerald-300 hover:bg-emerald-400/15">Current</Badge>}
-                      </div>
-                      <div className="mt-1 text-lg text-white/80">{item.role}</div>
-                      <ul className="mt-5 space-y-3 text-white/65">
-                        {item.bullets.map((bullet) => (
-                          <li key={bullet} className="flex gap-3">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5 text-sm text-white/70">
-                      <div className="font-medium text-white">{item.period}</div>
-                      <div className="mt-2">{item.location}</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </motion.section>
+        <div className="space-y-5">
+          {experience.map((item, index) => (
+            <motion.div key={item.company} variants={fadeUp}>
+              <Card className="overflow-hidden rounded-[2rem] border-white/10 bg-white/[0.04]">
+                <CardContent className="grid gap-6 p-7 lg:grid-cols-[90px_1fr_260px]">
+                  <div className="text-sm font-medium text-emerald-300/90">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
 
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-white text-2xl font-semibold">{item.company}</h3>
+                      {index === 0 && (
+                        <Badge className="rounded-full bg-emerald-400/15 text-emerald-300 hover:bg-emerald-400/15">
+                          Current
+                        </Badge>
+                      )}
+                    </div>
+
+                    <div className="mt-1 text-lg text-white/80">{item.role}</div>
+
+                    <ul className="mt-5 space-y-3 text-white/65">
+                      {item.bullets.map((bullet) => (
+                        <li key={bullet} className="flex gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {item.projects?.length > 0 && (
+                      <div className="mt-8 space-y-4">
+                        <div className="text-sm uppercase tracking-[0.25em] text-emerald-300">
+                          Related Projects
+                        </div>
+
+                        {item.projects.map((project) => (
+                          <div
+                            key={project.name}
+                            className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5"
+                          >
+                            <h4 className="text-lg font-semibold text-white">{project.name}</h4>
+                            <p className="mt-2 text-white/65">{project.description}</p>
+
+                            <div className="mt-4 flex flex-wrap gap-2">
+                              {project.tags.map((tag) => (
+                                <Badge
+                                  key={tag}
+                                  className="rounded-full bg-white/6 text-white/75 hover:bg-white/6"
+                                >
+                                  {tag}
+                                </Badge>
+                              ))}
+                            </div>
+
+                            {project.privacyNote && (
+                              <div className="mt-4 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-200">
+                                {project.privacyNote}
+                              </div>
+                            )}
+
+                            {project.links?.length > 0 && (
+                              <div className="mt-4 flex flex-wrap gap-3">
+                                {project.links.map((link) => (
+                                  <a
+                                    key={link.url}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex rounded-full bg-emerald-400 px-4 py-2 text-sm font-medium text-neutral-950 transition hover:bg-emerald-300"
+                                  >
+                                    {link.label}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+
+                            {project.screenshots?.length > 0 && (
+                              <div className="mt-4">
+                                <button
+                                  onClick={() => openScreenshots(project.name, project.screenshots)}
+                                  className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white transition hover:bg-white/10"
+                                >
+                                  View Screenshots
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5 text-sm text-white/70">
+                    <div className="font-medium text-white">{item.period}</div>
+                    <div className="mt-2">{item.location}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
         <motion.section
           id="projects"
           initial="hidden"
@@ -515,19 +825,66 @@ export default function BoonJosephPortfolio() {
                     </div>
                   </div>
                   <CardContent className="p-7">
-                    <p className="text-lg leading-8 text-white/65">{project.description}</p>
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} className="rounded-full bg-white/6 text-white/75 hover:bg-white/6">{tag}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
+                      <p className="text-lg leading-8 text-white/65">
+                        {project.description}
+                      </p>
+
+                      {/* TAGS */}
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <Badge
+                            key={tag}
+                            className="rounded-full bg-white/6 text-white/75 hover:bg-white/6"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+
+                      {/* PRIVACY */}
+                      {project.privacyNote && (
+                        <div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-200">
+                          {project.privacyNote}
+                        </div>
+                      )}
+
+                      {/* ACTIONS */}
+                      <div className="mt-6 flex flex-wrap gap-3">
+
+                        {/* Screenshots */}
+                        {project.screenshots && project.screenshots.length > 0 && (
+                          <button
+                            onClick={() => openScreenshots(project.title, project.screenshots)}
+                            className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white hover:bg-white/10"
+                          >
+                            View Screenshots
+                          </button>
+                        )}
+
+                        {/* Links */}
+                        {project.links && project.links.length > 0 && (
+                          project.links.map((link) => (
+                            <a
+                              key={link.url}
+                              href={link.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="rounded-full bg-emerald-400 px-4 py-2 text-sm font-medium text-neutral-950 hover:bg-emerald-300"
+                            >
+                              {link.label}
+                            </a>
+                          ))
+                        )}
+
+                      </div>
+                    </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
         </motion.section>
 
+    
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -673,6 +1030,42 @@ export default function BoonJosephPortfolio() {
           </div>
         </div>
       </footer>
+      {lightbox.open && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+    
+    <button
+      onClick={closeScreenshots}
+      className="absolute right-6 top-6 text-white text-2xl"
+    >
+      ✕
+    </button>
+
+    <button
+      onClick={prevImage}
+      className="absolute left-6 text-white text-3xl"
+    >
+      ‹
+    </button>
+
+    <img
+      src={lightbox.images[lightbox.index]}
+      alt=""
+      className="max-h-[80vh] max-w-[90vw] rounded-2xl"
+    />
+
+    <button
+      onClick={nextImage}
+      className="absolute right-6 text-white text-3xl"
+    >
+      ›
+    </button>
+
+    <div className="absolute bottom-6 text-white text-sm">
+      {lightbox.index + 1} / {lightbox.images.length}
+    </div>
+
+  </div>
+)}
     </div>
   );
 }
