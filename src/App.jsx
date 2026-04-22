@@ -480,7 +480,7 @@ const skills = {
   Languages: ['French', 'English', 'Ewe'],
 };
 
-const heroPortrait = 'https://i.ibb.co/Lz0V9qNy/joe.png';
+const heroPortrait = 'https://i.ibb.co/cSKnKk3p/joe.png';
 
 export default function BoonJosephPortfolio() {
   const [lightbox, setLightbox] = useState({
