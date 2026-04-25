@@ -593,7 +593,7 @@ export default function BoonJosephPortfolio() {
               {[
                 ['5+', 'Years of Experience'],
                 ['17+', 'Projects Delivered'],
-                ['3', 'Active Clients'],
+                ['2', 'Active Clients'],
                 ['100%', 'On-Time Delivery'],
               ].map(([value, label]) => (
                 <Card key={label} className="rounded-3xl border-white/10 bg-white/[0.04] shadow-2xl shadow-black/20 backdrop-blur">
