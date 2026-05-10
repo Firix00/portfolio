@@ -450,8 +450,6 @@ const projects = [
     
     highlights: [
     'Designed and developed a multiplayer educational board-game system inspired by progression-based platform mechanics, including quizzes, rewards, penalties, dice movement, and competitive ranking workflows.',
-    
-    ```
     'Built memory-training systems using flashcards, image associations, contextual memorization techniques, and AI-assisted learning support to improve long-term knowledge retention.',
     
     'Implemented quiz-generation and automated study-card systems with dynamic educational content workflows and adaptive revision mechanics.',
@@ -465,7 +463,6 @@ const projects = [
     'Implemented behavioral analytics and statistics systems enabling users to monitor study performance, weekly progression, engagement metrics, and learning consistency over time.',
     
     'Integrated notifications, reminder systems, targeted advertising workflows, virtual currency purchases, and heart/energy regeneration mechanics to support long-term platform engagement.',
-    ```
     
     ],
     
@@ -505,8 +502,7 @@ const projects = [
       
       highlights: [
       'Designed and developed an intelligent scheduling system capable of automatically organizing tasks across calendars based on availability, workload balancing, activity types, and configurable productivity constraints.',
-      
-      ```
+    
       'Implemented adaptive planning workflows that analyze user scheduling patterns and automatically suggest optimized task placement and time allocation strategies.',
       
       'Built session-persistence systems allowing users to resume active work sessions, maintain task continuity, and track long-running productivity workflows across application restarts.',
@@ -520,7 +516,6 @@ const projects = [
       'Built reminder, notification, and behavioral reinforcement systems encouraging task consistency, routine maintenance, and long-term productivity engagement.',
       
       'Worked on statistics and progression systems enabling users to analyze productivity trends, performance metrics, activity consistency, and long-term behavioral evolution.',
-      ```
       
       ],
       
