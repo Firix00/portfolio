@@ -442,9 +442,33 @@ const projects = [
     title: 'Se-Learn',
     period: '2022',
     description:
-      'An educational mobile application for students, featuring learning content, mini-games, quizzes, and school support functionality.',
-    tags: ['Flutter', 'Dart', 'Education'],
+    'A gamified educational platform combining learning systems, AI-assisted study support, memory-training tools, competitive progression mechanics, and interactive mini-games to improve student engagement and retention.',
+    
+    tags: ['Flutter', 'Firebase', 'Education', 'Gamification', 'AI'],
+    
     status: 'Completed',
+    
+    highlights: [
+    'Designed and developed a multiplayer educational board-game system inspired by progression-based platform mechanics, including quizzes, rewards, penalties, dice movement, and competitive ranking workflows.',
+    
+    ```
+    'Built memory-training systems using flashcards, image associations, contextual memorization techniques, and AI-assisted learning support to improve long-term knowledge retention.',
+    
+    'Implemented quiz-generation and automated study-card systems with dynamic educational content workflows and adaptive revision mechanics.',
+    
+    'Developed gamification infrastructure including points, rankings, weekly competitions, reward systems, achievement notifications, virtual currency systems, and engagement-based progression tracking.',
+    
+    'Integrated AI-assisted educational explanations allowing users to request contextual help and exercise breakdowns directly inside learning flows.',
+    
+    'Built educational mini-games for English learning, spelling challenges, translation exercises, word reconstruction systems, listening exercises, and vocabulary reinforcement.',
+    
+    'Implemented behavioral analytics and statistics systems enabling users to monitor study performance, weekly progression, engagement metrics, and learning consistency over time.',
+    
+    'Integrated notifications, reminder systems, targeted advertising workflows, virtual currency purchases, and heart/energy regeneration mechanics to support long-term platform engagement.',
+    ```
+    
+    ],
+    
     screenshots: [
       '/images/selearn-1.png',
       '/images/selearn-2.png',
@@ -463,33 +487,60 @@ const projects = [
       '/images/selearn-15.png',
       '/images/selearn-16.png',
     ],
+    
     links: [],
     privacyNote: null,
-  },
-  {
-    eyebrow: 'Personal Project',
-    title: 'Se-Learn Flow',
-    period: '2024',
-    description:
-      'A day-planning and productivity application inspired by Notion and Microsoft To-Do, with multi-day planning and lightweight AI-assisted task organization.',
-    tags: ['Flutter', 'Productivity', 'AI'],
-    status: 'Active',
-    screenshots: [
-      '/images/flow-1.png',
-      '/images/flow-2.png',
-      '/images/flow-3.png',
-      '/images/flow-4.png',
-      '/images/flow-5.png',
-      '/images/flow-6.png',
-      '/images/flow-7.png',
-      '/images/flow-8.png',
-      '/images/flow-9.png',
-      '/images/flow-10.png',
-      '/images/flow-11.png',
-    ],
-    links: [],
-    privacyNote: null,
-  },
+    },
+    
+    {
+      eyebrow: 'Personal Project',
+      title: 'Se-Learn Flow',
+      period: '2024',
+      description:
+      'An AI-assisted productivity and workflow-management platform focused on intelligent scheduling, behavioral productivity systems, adaptive planning, and long-term goal orchestration.',
+      
+      tags: ['Flutter', 'Productivity', 'AI', 'Workflow Systems'],
+      
+      status: 'Active',
+      
+      highlights: [
+      'Designed and developed an intelligent scheduling system capable of automatically organizing tasks across calendars based on availability, workload balancing, activity types, and configurable productivity constraints.',
+      
+      ```
+      'Implemented adaptive planning workflows that analyze user scheduling patterns and automatically suggest optimized task placement and time allocation strategies.',
+      
+      'Built session-persistence systems allowing users to resume active work sessions, maintain task continuity, and track long-running productivity workflows across application restarts.',
+      
+      'Developed productivity-evaluation systems combining task completion metrics, AI-assisted summaries, questionnaire analysis, objective tracking, and engagement scoring to assess user progress and reward consistency.',
+      
+      'Implemented AI-assisted productivity interactions enabling contextual task reviews, activity summaries, and behavioral feedback workflows based on user-generated work sessions.',
+      
+      'Designed hierarchical workflow-tree systems allowing users to decompose long-term goals into structured objectives, sub-objectives, and automatically generated task pathways integrated directly into scheduling flows.',
+      
+      'Built reminder, notification, and behavioral reinforcement systems encouraging task consistency, routine maintenance, and long-term productivity engagement.',
+      
+      'Worked on statistics and progression systems enabling users to analyze productivity trends, performance metrics, activity consistency, and long-term behavioral evolution.',
+      ```
+      
+      ],
+      
+      screenshots: [
+        '/images/flow-1.png',
+        '/images/flow-2.png',
+        '/images/flow-3.png',
+        '/images/flow-4.png',
+        '/images/flow-5.png',
+        '/images/flow-6.png',
+        '/images/flow-7.png',
+        '/images/flow-8.png',
+        '/images/flow-9.png',
+        '/images/flow-10.png',
+        '/images/flow-11.png',
+      ],
+      
+      links: [],
+      privacyNote: null,
+      },      
 ];
 const principles = [
   'Delivered On Time',
