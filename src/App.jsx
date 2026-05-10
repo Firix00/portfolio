@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -18,7 +18,7 @@ const IconBase = ({ children, className = 'h-5 w-5' }) => (
     {children}
   </svg>
 );
-
+ 
 const MailIcon = ({ className }) => (
   <IconBase className={className}>
     <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -557,6 +557,7 @@ const skills = {
 const heroPortrait = 'https://i.ibb.co/cSKnKk3p/joe.png';
 
 export default function BoonJosephPortfolio() {
+  
   const [lightbox, setLightbox] = useState({
     open: false,
     title: '',
@@ -572,6 +573,7 @@ export default function BoonJosephPortfolio() {
       index: 0,
     });
   };
+  const [openHighlights, setOpenHighlights] = useState({})
   
   const closeScreenshots = () => {
     setLightbox({
@@ -902,18 +904,62 @@ export default function BoonJosephPortfolio() {
                       <p className="text-lg leading-8 text-white/65">
                         {project.description}
                       </p>
+                    
+
 {/* HIGHLIGHTS */}
 {project.highlights && project.highlights.length > 0 && (
-  <div className="mt-6 space-y-3">
-    {project.highlights.map((highlight) => (
-      <div
-        key={highlight}
-        className="flex items-start gap-3 text-sm text-white/75"
+  <div className="mt-6">
+    
+    {/* TOGGLE BUTTON */}
+    <button
+      onClick={() =>
+        setOpenHighlights((prev) => ({
+          ...prev,
+          [project.title]: !prev[project.title],
+        }))
+      }
+      className="flex items-center gap-2 text-sm font-medium text-emerald-300 hover:text-emerald-200 transition-colors"
+    >
+      <span>
+        {openHighlights[project.title]
+          ? 'Hide Technical Highlights'
+          : 'Show Technical Highlights'}
+      </span>
+
+      <span
+        className={`transition-transform duration-300 ${
+          openHighlights[project.title] ? 'rotate-180' : ''
+        }`}
       >
-        <div className="mt-2 h-2 w-2 rounded-full bg-emerald-400" />
-        <p className="leading-7">{highlight}</p>
-      </div>
-    ))}
+        ▼
+      </span>
+    </button>
+
+    {/* COLLAPSIBLE CONTENT */}
+    <AnimatePresence initial={false}>
+      {openHighlights[project.title] && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+          className="overflow-hidden"
+        >
+          <div className="mt-4 space-y-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            {project.highlights.map((highlight) => (
+              <div
+                key={highlight}
+                className="flex items-start gap-3 text-sm text-white/75"
+              >
+                <div className="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" />
+
+                <p className="leading-7">{highlight}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   </div>
 )}
                       {/* TAGS */}
