@@ -178,24 +178,28 @@ const services = [
 const experience = [
   {
     company: 'Sona',
-    role: 'Mobile Developer — Therapy App',
+    role: 'Backend & Mobile Developer — AI Therapy Platform',
     period: 'Dec 2025 – Present',
     location: 'Netherlands',
     bullets: [
-      'Built features for a couples therapy app in collaboration with a licensed therapist.',
-      'Designed AI-driven therapy backend workflows.',
-      'Added security layers for sensitive user data protection.',
+      'Designed and implemented a security-first architecture for a couples therapy platform, including role-based access control, encrypted backups, audit logging, monitoring systems, anomaly detection, and encryption key rotation workflows.',
+      
+      'Built AI-driven therapy orchestration systems capable of generating contextual therapist-inspired responses based on relationship history, conversation analysis, behavioral summaries, and evolving interaction patterns.',
+  
+      'Developed secure backend workflows and internal governance systems for handling sensitive user data, including controlled staff access policies, traceability mechanisms, and compliance-oriented security protections.',
+  
+      'Contributed to platform infrastructure including subscription systems, user engagement analytics, and administrative dashboard tooling for operational and therapy-management workflows.',
     ],
     projects: [
       {
         name: 'Sona Therapy App',
         description:
-          'A couples therapy application developed with licensed therapists, focused on guided interaction, therapy support flows, and privacy-conscious implementation.',
-        tags: ['Flutter', 'Therapy', 'Security'],
+          'A privacy-focused couples therapy platform developed alongside licensed therapists, combining AI-assisted therapeutic interaction systems, secure backend infrastructure, behavioral analysis workflows, and sensitive data protection mechanisms.',
+        tags: ['Flutter', 'NestJS', 'AI', 'Security', 'Therapy'],
         screenshots: [],
         links: [],
         privacyNote:
-          'Unfortunately, I cannot publicly share product details or screenshots for this project because of privacy concerns.',
+          'Due to the sensitive nature of therapy-related data and platform privacy requirements, I cannot publicly share screenshots or internal product details for this project.',
       },
     ],
   },
@@ -269,43 +273,65 @@ const experience = [
   },
   {
     company: 'PathwayGlobal Technology & Consulting LLC',
-    role: 'Backend / Mobile Developer',
+    role: 'Backend & Mobile Developer — Product Safety Platform',
     period: '2025',
     location: 'USA',
     bullets: [
-      'Worked on backend and mobile contributions for a product safety solution.',
-      'Contributed to AWS deployment-related work.',
-      'Collaborated on product development for a recall alert platform.',
+      'Developed backend systems and APIs for a product recall intelligence platform designed to detect and distribute safety alerts for dangerous consumer products.',
+  
+      'Built and maintained large-scale data ingestion and filtering pipelines that collected, analyzed, validated, and normalized recall data from sources such as the FDA and other public safety agencies.',
+  
+      'Contributed to product-recognition and recall-matching systems capable of identifying potentially dangerous products through user interactions and image-based detection workflows.',
+  
+      'Worked on geolocation and mapping infrastructure connecting recalled products to nearby stores, supermarkets, and distribution points within specific geographic areas.',
+  
+      'Collaborated on backend workflows for product detection, trust-based filtering, news aggregation, and real-time recall notification delivery.',
+  
+      'Contributed to AWS-related deployment and infrastructure workflows supporting platform reliability, scalability, and data processing operations.',
     ],
     projects: [
       {
         name: 'Safe Shop Alert',
         description:
-          'A dangerous product recall alert application designed to notify users when a purchased product is identified as risky.',
-        tags: ['Flutter', 'NestJS', 'AWS'],
+          'A product safety and recall intelligence platform designed to aggregate, analyze, and distribute dangerous product alerts through AI-assisted detection systems, recall data pipelines, geolocation mapping, and real-time notification workflows.',
+        tags: ['Flutter', 'NestJS', 'AWS', 'APIs', 'Data Processing', 'Product Safety'],
         links: [],
         screenshots: [],
         privacyNote:
-          'I cannot publicly share screenshots of this product due to client and product restrictions.',
+          'Due to client and product confidentiality restrictions, I cannot publicly share screenshots or internal implementation details for this project.',
       },
     ],
   },
   {
     company: 'Kaba Delivery',
-    role: 'Full-Stack & Mobile Developer',
+    role: 'Full-Stack Product Engineer',
     period: 'Sep 2024 – Jan 2025',
     location: 'Togo',
     bullets: [
-      'Worked on backend systems, admin dashboards, and mobile app features for a delivery platform.',
-      'Contributed to new verticals such as pharmacy, shipping, and Kaba-China.',
-      'Supported UI improvements and broader product evolution.',
+      'Built and maintained operational backend systems for a multi-service delivery platform, including order-routing automation, restaurant dispatch workflows, rider assignment systems, and delivery lifecycle management.',
+  
+      'Developed dynamic pricing and surcharge infrastructure based on weather conditions, geolocation zones, nighttime delivery, weekends, and operational logistics constraints.',
+  
+      'Contributed to logistics and shipment-management systems supporting pharmacy delivery, external store requests, intercity shipping, and international delivery workflows with package estimation, tracking, and operational negotiation features.',
+  
+      'Implemented business-logic integrations for subscription systems, including delivery-radius benefits, promotional pricing workflows, and order-level subscription handling across distributed backend services.',
+  
+      'Worked on wallet and payment infrastructure through integration of mobile-money aggregators, transaction-processing systems, deposit workflows, and operational payment flows.',
+  
+      'Contributed across multiple platform applications including customer, rider, restaurant, and partner-facing systems to ensure feature consistency and operational continuity.',
+  
+      'Participated in production deployment workflows, Play Store and App Store release management, application publishing, signing-key management, and production update operations.',
+  
+      'Led application stabilization efforts by diagnosing production issues, monitoring logs, resolving backend and mobile bugs, and maintaining operational reliability across live systems.',
+  
+      'Contributed to platform evolution through UI/UX improvements, rating and review systems, delivery experience enhancements, and operational tooling improvements.',
     ],
     projects: [
       {
         name: 'Kaba Delivery',
         description:
-          'Customer delivery application with full-stack contributions across mobile features, admin tools, and service expansions.',
-        tags: ['Flutter', 'Delivery'],
+          'A large-scale multi-service delivery platform supporting food delivery, pharmacy services, external store requests, shipment workflows, subscription systems, operational automation, and mobile-money payment infrastructure.',
+        tags: ['Flutter', 'NestJS', 'Delivery', 'Payments', 'Logistics'],
         links: [
           {
             label: 'View on Play Store',
@@ -315,11 +341,12 @@ const experience = [
         screenshots: [],
         privacyNote: null,
       },
+  
       {
         name: 'Kaba Partners',
         description:
-          'Partner application for merchants and sales points to manage orders, products, and interactions with the main Kaba ecosystem.',
-        tags: ['Flutter', 'Kaba Delivery'],
+          'Merchant and partner management application enabling restaurants, stores, and sales points to manage products, orders, operational workflows, and interactions with the Kaba ecosystem.',
+        tags: ['Flutter', 'Operations', 'Delivery'],
         links: [
           {
             label: 'View on Play Store',
@@ -329,15 +356,16 @@ const experience = [
         screenshots: [],
         privacyNote: null,
       },
+  
       {
         name: 'Kaba Riders',
         description:
-          'Driver application for delivery agents with ride tracking, delivery management, history, and real-time notifications.',
-        tags: ['Flutter', 'Delivery'],
+          'Delivery-driver application supporting ride management, delivery tracking, order workflows, operational notifications, and real-time logistics coordination.',
+        tags: ['Flutter', 'Logistics', 'Delivery'],
         links: [],
         screenshots: [],
         privacyNote:
-          'Due to product ownership and usage rights, I cannot publicly share screenshots of this application.',
+          'Due to product ownership and usage rights, I cannot publicly share screenshots or internal operational flows for this application.',
       },
     ],
   },
