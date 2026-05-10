@@ -902,7 +902,20 @@ export default function BoonJosephPortfolio() {
                       <p className="text-lg leading-8 text-white/65">
                         {project.description}
                       </p>
-
+{/* HIGHLIGHTS */}
+{project.highlights && project.highlights.length > 0 && (
+  <div className="mt-6 space-y-3">
+    {project.highlights.map((highlight) => (
+      <div
+        key={highlight}
+        className="flex items-start gap-3 text-sm text-white/75"
+      >
+        <div className="mt-2 h-2 w-2 rounded-full bg-emerald-400" />
+        <p className="leading-7">{highlight}</p>
+      </div>
+    ))}
+  </div>
+)}
                       {/* TAGS */}
                       <div className="mt-6 flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
