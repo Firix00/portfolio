@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useState } from 'react';
+import { Building2Icon, Lightbulb, WrenchIcon } from 'lucide-react';
 const IconBase = ({ children, className = 'h-5 w-5' }) => (
   <svg
     viewBox="0 0 24 24"
@@ -131,6 +132,27 @@ const stagger = {
 };
 
 const services = [
+  {
+    icon: Lightbulb,
+    title: 'Product & Startup Development',
+    description:
+      'From idea to launch — helping founders and businesses turn concepts into real digital products, MVPs, SaaS platforms, and scalable applications.',
+    tags: ['MVP', 'Startup', 'SaaS', 'Product Design'],
+  },
+  {
+    icon: Building2Icon,
+    title: 'Business Digital Presence',
+    description:
+      'Professional websites and online platforms that help companies present their brand, attract customers, and establish a strong online presence.',
+    tags: ['Business Website', 'Branding', 'Showcase', 'Online Presence'],
+  },
+  {
+    icon: WrenchIcon,
+    title: 'System Maintenance & Bug Fixing',
+    description:
+      'Debugging, improving, and maintaining existing applications and systems to ensure stability, performance, and long-term reliability.',
+    tags: ['Bug Fixing', 'Maintenance', 'Optimization', 'Refactoring'],
+  },
   {
     icon: ServerIcon,
     title: 'Backend API Development',
@@ -616,6 +638,8 @@ export default function BoonJosephPortfolio() {
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#experience" className="transition hover:text-white">Experience</a>
             <a href="#projects" className="transition hover:text-white">Projects</a>
+            <a href="#how_i_work" className="transition hover:text-white">How I Work</a>
+            <a href="#skills" className="transition hover:text-white">Skills</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
           </nav>
           <a href="#contact">
@@ -1028,7 +1052,7 @@ export default function BoonJosephPortfolio() {
           <motion.div variants={fadeUp} className="mb-12 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <div className="mb-3 text-xs uppercase tracking-[0.3em] text-emerald-300">Why Work With Me</div>
-              <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">What I Bring to the Table.</h2>
+              <h2 id="how_i_work" className="text-4xl font-semibold tracking-tight sm:text-5xl">What I Bring to the Table.</h2>
             </div>
             <p className="max-w-2xl text-lg leading-8 text-white/65">
               Beyond technical skills — these are the working principles that make collaboration smooth and results consistent.
@@ -1074,7 +1098,7 @@ export default function BoonJosephPortfolio() {
             </p>
           </motion.div>
 
-          <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+          <div id="skills" className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
             {Object.entries(skills).map(([group, items]) => (
               <motion.div key={group} variants={fadeUp}>
                 <Card className="h-full rounded-[2rem] border-white/10 bg-white/[0.04]">
